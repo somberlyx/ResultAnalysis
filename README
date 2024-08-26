@@ -1,1 +1,3 @@
 Using df.describe() method we see that the students of this dataset have not score 0 in Reading or Writing but someone has obtained a 0 in Mathematics.
+
+The number of female students in this class is more than the number of male students
