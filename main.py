@@ -29,11 +29,25 @@ df["WklyStudyHours"] = df["WklyStudyHours"].str.replace("05-Oct", "05-10")
 
 # plt.figure(figsize=(4,4))
 # sns.heatmap(gb, annot=True)
+# plt.title("Relationship between Parent's Education and Students' scores")
 # plt.show()
 
-gb1 = df.groupby("ParentMaritalStatus").agg({"MathScore":'mean', "ReadingScore": 'mean', "WritingScore":'mean'})
-print(gb1)
+# gb1 = df.groupby("ParentMaritalStatus").agg({"MathScore":'mean', "ReadingScore": 'mean', "WritingScore":'mean'})
+# print(gb1)
 
-plt.figure(figsize=(4,4))
-sns.heatmap(gb1, annot=True)
+# plt.figure(figsize=(4,4))
+# sns.heatmap(gb1, annot=True)
+# plt.title("Relationship between Parent's Marital Status and Students' scores")
+# plt.show()
+
+#box plot of each student scores
+
+sns.boxenplot(data = df, x = 'MathScore')
 plt.show()
+
+sns.boxenplot(data = df, x = 'ReadingScore')
+plt.show()
+
+sns.boxenplot(data = df, x = 'WritingScore')
+plt.show()
+
