@@ -3,3 +3,5 @@ Using df.describe() method we see that the students of this dataset have not sco
 The number of female students in this class is more than the number of male students
 
 Students whose Parents held any type of degree did better in school on average than comapred to those whose parent's didn't, Additionally students' whose parents obtained a Master's degree did on average better than any other student whose parent's had some other level of education.
+
+Students' score on average were not affected by the marital status of their parents, all students mean score in each subject was similar to each others.

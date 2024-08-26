@@ -24,9 +24,16 @@ df["WklyStudyHours"] = df["WklyStudyHours"].str.replace("05-Oct", "05-10")
 # plt.show()
 
 #Effect of ParentEducation on student scores
-gb = df.groupby("ParentEduc").agg({"MathScore":'mean', "ReadingScore": 'mean', "WritingScore":'mean'})
-print(gb)
+# gb = df.groupby("ParentEduc").agg({"MathScore":'mean', "ReadingScore": 'mean', "WritingScore":'mean'})
+# print(gb)
+
+# plt.figure(figsize=(4,4))
+# sns.heatmap(gb, annot=True)
+# plt.show()
+
+gb1 = df.groupby("ParentMaritalStatus").agg({"MathScore":'mean', "ReadingScore": 'mean', "WritingScore":'mean'})
+print(gb1)
 
 plt.figure(figsize=(4,4))
-sns.heatmap(gb, annot=True)
+sns.heatmap(gb1, annot=True)
 plt.show()
