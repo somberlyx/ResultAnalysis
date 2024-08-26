@@ -18,10 +18,15 @@ print(df.head())
 df["WklyStudyHours"] = df["WklyStudyHours"].str.replace("05-Oct", "05-10") 
 
 #Gender Ditribution
-plt.figure(figsize=(5,5))
-ax = sns.countplot(data = df, x = 'Gender')
-ax.bar_label(ax.containers[0])
+# plt.figure(figsize=(5,5))
+# ax = sns.countplot(data = df, x = 'Gender')
+# ax.bar_label(ax.containers[0])
+# plt.show()
+
+#Effect of ParentEducation on student scores
+gb = df.groupby("ParentEduc").agg({"MathScore":'mean', "ReadingScore": 'mean', "WritingScore":'mean'})
+print(gb)
+
+plt.figure(figsize=(4,4))
+sns.heatmap(gb, annot=True)
 plt.show()
-
-
-
